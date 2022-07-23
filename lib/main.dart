@@ -15,25 +15,21 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Center(
-        child: IconButton(
-          onPressed: (){
-            print('You clicked the button !');
+      body: Container(
+        child: ElevatedButton.icon(
+          onPressed: () {
+            print('you cliked the button !');
           },
           icon: Icon(
-            Icons.sports_basketball_rounded,
-            size: 50.0,
-            color: Colors.red,
+            Icons.sports_basketball,
           ),
-        )
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Text('Click'),
-        backgroundColor: Colors.red[600],
-      ),
-    )
-      ;
+          label: Text('Basketball'),
+        ),
+        color: Colors.green,
+        padding: EdgeInsets.all(20.0),
+        margin: EdgeInsets.fromLTRB(20.0, 10, 0, 0),
+      )
+        );
   }
 }
 
