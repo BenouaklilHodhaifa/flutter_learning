@@ -16,9 +16,16 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
-        child: Image.asset('assets/Eren_meets_Yeagerists.png'),
-        //child: Image.network('https://images.unsplash.com/photo-1658496723006-7d4d39ad38e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60'),
-        // the last one is for network images
+        child: IconButton(
+          onPressed: (){
+            print('You clicked the button !');
+          },
+          icon: Icon(
+            Icons.sports_basketball_rounded,
+            size: 50.0,
+            color: Colors.red,
+          ),
+        )
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
