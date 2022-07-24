@@ -15,24 +15,21 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          TextButton(
-              onLongPress: () {print('move your hand bitch !');},
-              onPressed: () {
-            print('You clicked the text buttton !');
-          },
-              child: Text('Text Button'),
+          Container(
+            color: Colors.cyan,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('first'),
+                Text('Second'),
+              ],
+            ),
           ),
-          ElevatedButton(
-              onPressed: () {
-                print('You clicked the elevated button !');
-              },
-              child: Text('Elevated Button'),
-          ),
-          Text('Text widget')
+          ElevatedButton(onPressed: () {print('You pressed the elevated button');}, child: Text('Elevated button')),
+          TextButton(onPressed: () {print('You pressed the text button');}, child: Text('Text button'))
         ],
       ),
         );
