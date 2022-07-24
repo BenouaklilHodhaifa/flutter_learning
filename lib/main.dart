@@ -15,20 +15,26 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Container(
-        child: ElevatedButton.icon(
-          onPressed: () {
-            print('you cliked the button !');
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          TextButton(
+              onLongPress: () {print('move your hand bitch !');},
+              onPressed: () {
+            print('You clicked the text buttton !');
           },
-          icon: Icon(
-            Icons.sports_basketball,
+              child: Text('Text Button'),
           ),
-          label: Text('Basketball'),
-        ),
-        color: Colors.green,
-        padding: EdgeInsets.all(20.0),
-        margin: EdgeInsets.fromLTRB(20.0, 10, 0, 0),
-      )
+          ElevatedButton(
+              onPressed: () {
+                print('You clicked the elevated button !');
+              },
+              child: Text('Elevated Button'),
+          ),
+          Text('Text widget')
+        ],
+      ),
         );
   }
 }
